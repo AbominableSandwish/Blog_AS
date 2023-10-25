@@ -3,7 +3,7 @@ import DefaultLayout from '../../layouts/DefaultLayout.astro'
 import { Breadcrumbs, BreadcrumbsItem } from 'accessible-astro-components'
 
 export async function getStaticPaths() {
-  const data = await fetch('https://github.com/AbominableSandwish/Blog_AS/tree/main/src/assets/blog').then((response) => response.json())
+  const data = await fetch('https://my-json-server.typicode.com/AbominableSandwish/Blog_AS').then((response) => response.json())
 
   return data.map((post) => {
     return {
